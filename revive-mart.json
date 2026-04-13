@@ -1,0 +1,108 @@
+{
+  "simulationId": "revive-mart",
+  "initialState": {
+    "round": 0,
+    "budget": 100,
+    "customerSatisfaction": 50,
+    "loyalty": 40,
+    "churn": 20,
+    "revenue": 100,
+    "brandEquity": 50,
+    "operationalEfficiency": 50,
+    "priceSensitivity": 30
+  },
+  "rounds": [
+    {
+      "round": 0,
+      "name": "Baseline",
+      "decisionsAllowed": []
+    },
+    {
+      "round": 1,
+      "name": "Stabilization",
+      "decisionsAllowed": [
+        "massDiscounts",
+        "basicLoyaltyProgram"
+      ]
+    },
+    {
+      "round": 2,
+      "name": "Optimization",
+      "decisionsAllowed": [
+        "crmPersonalization",
+        "staffTraining"
+      ]
+    },
+    {
+      "round": 3,
+      "name": "Growth",
+      "decisionsAllowed": [
+        "onlineExpansion"
+      ]
+    },
+    {
+      "round": 4,
+      "name": "Sustainability",
+      "decisionsAllowed": [
+        "brandTrustRepair"
+      ]
+    }
+  ],
+  "decisions": {
+    "massDiscounts": {
+      "name": "Mass Discounts",
+      "cost": 15,
+      "immediateEffects": {
+        "revenue": 20
+      },
+      "delayedEffects": {
+        "brandEquity": -8
+      }
+    },
+    "basicLoyaltyProgram": {
+      "name": "Loyalty Program",
+      "cost": 10,
+      "immediateEffects": {
+        "loyalty": 6
+      }
+    },
+    "crmPersonalization": {
+      "name": "CRM Personalization",
+      "cost": 15,
+      "immediateEffects": {
+        "customerSatisfaction": 12,
+        "loyalty": 10
+      }
+    },
+    "staffTraining": {
+      "name": "Staff Training",
+      "cost": 10,
+      "immediateEffects": {
+        "operationalEfficiency": 8
+      }
+    },
+    "onlineExpansion": {
+      "name": "Online Expansion",
+      "cost": 12,
+      "immediateEffects": {
+        "revenue": 10
+      }
+    },
+    "brandTrustRepair": {
+      "name": "Brand Repair",
+      "cost": 5,
+      "immediateEffects": {
+        "brandEquity": 8
+      }
+    }
+  },
+  "scoring": {
+    "weights": {
+      "loyalty": 0.25,
+      "customerSatisfaction": 0.2,
+      "revenue": 0.2,
+      "operationalEfficiency": 0.2,
+      "brandEquity": 0.15
+    }
+  }
+}

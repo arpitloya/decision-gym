@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function Home(){return (<main style={{padding:40}}><h1>Managerial Decision Gym</h1><Link href='/simulation/revive-mart'>Launch ReviveMart Simulation</Link></main>)}
